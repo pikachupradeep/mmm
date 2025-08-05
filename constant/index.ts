@@ -42,20 +42,24 @@ export const navLinks = [
     },
       {
         id:3,
-        list: 'Projects',
-        link: '/projects'
+        list: 'Affiliate membership',
+        link: '/affiliate'
     },
       {
         id:4,
-        list: 'Blog',
-        link: '/blog'
+        list: 'Hearing Test & Products',
+        link: '/hearingtest'
     },
       {
         id:5,
-        list: 'Contact Us',
+        list: 'Gallery',
+        link: '/gallery'
+    },
+       {
+        id:6,
+        list: 'Contact',
         link: '/contact'
     },
-     
 ]
 
 

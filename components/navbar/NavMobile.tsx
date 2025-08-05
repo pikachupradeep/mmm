@@ -14,6 +14,7 @@ import { navLinks } from "@/constant";
 import Link from "next/link";
 import { RiMenu4Fill } from "react-icons/ri";
 import { usePathname } from 'next/navigation'
+import Image from "next/image";
 
 export function SheetDemo() {
 
@@ -23,14 +24,16 @@ export function SheetDemo() {
     <Sheet>
       <SheetTrigger asChild>
         <Button className="bg-transparent" variant="outline">
-        <RiMenu4Fill className="text-gray-300" />
+        <RiMenu4Fill className="text-blue-900 text-4xl" />
         </Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Logo</SheetTitle>
+          <SheetTitle>
+            <Image className="h-14 w-auto" src="/Logowhite.png" alt="logo" width={600} height={600} />
+          </SheetTitle>
           <SheetDescription>
-            Next Wizards Information Technology.
+            Beltone Hearing aids.
           </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 p-4">

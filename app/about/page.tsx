@@ -4,7 +4,7 @@ import AboutHero from '@/components/abouthero/AboutHero'
 
 const page = () => {
   return (
-    <div className='mt-32'>
+    <div className='mt-38 z-[-100]'>
     
 
       <div className="">

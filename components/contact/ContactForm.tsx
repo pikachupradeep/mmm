@@ -17,7 +17,7 @@ const ContactForm = () => {
             type="text"
             required
             className="p-6"
-            placeholder="Doe"
+            placeholder="John"
             />
             </div>
 

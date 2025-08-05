@@ -9,7 +9,7 @@ import { IoWarning } from 'react-icons/io5'
 
 const HearingTest = () => {
   return (
-    <div className="mt-28  p-4">
+    <div className="mt-34  p-4">
         <div className="hearingaidhero">
         <HearingAidPage />
         </div>

@@ -1,105 +1,83 @@
-'use client';
+'use client'
 
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import Image from "next/image";
+import React from "react";
+import Slider from "react-slick";
 
-const images: string[] = [
-  '/carousel/img1.png',
-  '/carousel/img2.png',
-  '/carousel/img3.png',
-  '/carousel/img4.png',
-  '/carousel/img5.png',
-  '/carousel/img6.png',
-  '/carousel/img7.png',
-  '/carousel/img8.png',
-  '/carousel/img9.png',
-];
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const DUPLICATION = 10; // repeat images 10 times
-const VISIBLE_COUNT = 4; // show 4 images at once
-const GAP_PX = 16; // space between images
-
-const InfiniteImageCarousel: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const [imageWidth, setImageWidth] = useState(0);
-
-  const x = useMotionValue(0);
-  const speed = 0.2;
-
-  // Update container width on mount & resize
-  useEffect(() => {
-    const updateWidth = () => {
-      if (containerRef.current) setContainerWidth(containerRef.current.offsetWidth);
-    };
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
-
-  // Calculate image width to fit exactly 4 images + gaps inside container
-  useEffect(() => {
-    if (containerWidth) {
-      const totalGapWidth = GAP_PX * (VISIBLE_COUNT - 1);
-      setImageWidth((containerWidth - totalGapWidth) / VISIBLE_COUNT);
-    }
-  }, [containerWidth]);
-
-  // Calculate total scroll width for duplicated images
-  const totalWidth = images.length * DUPLICATION * (imageWidth + GAP_PX);
-
-  const translateX = useTransform(x, (v) => `${v % totalWidth}px`);
-
-  // Scroll to the RIGHT with reset logic
-  useEffect(() => {
-    let animationFrame: number;
-
-    const animate = () => {
-      const currentX = x.get();
-      const nextX = currentX + speed;
-
-      x.set(nextX >= totalWidth ? 0 : nextX);
-
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animate();
-    return () => cancelAnimationFrame(animationFrame);
-  }, [x, totalWidth]);
-
+function AutoPlay() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
-    <div
-      ref={containerRef}
-      className="overflow-hidden bg-white border-t"
-      style={{ width: '100%' }}
-    >
-      <motion.div
-        className="flex"
-        style={{
-          x: translateX,
-          minWidth: totalWidth,
-          gap: GAP_PX,
-        }}
-      >
-        {[...Array(DUPLICATION)].flatMap((_, dupIndex) =>
-          images.map((src, idx) => (
-            <img
-              className="rounded-lg"
-              key={`${dupIndex}-${idx}`}
-              src={src}
-              alt={`img-${idx}`}
-              draggable={false}
-              style={{
-                width: imageWidth,
-                flexShrink: 0,
-                height: 'auto',
-              }}
-            />
-          ))
-        )}
-      </motion.div>
+    <div className="slider-container mt-0 mb-16">
+      <Slider {...settings}>
+        <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img1.png" alt="img1" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img2.png" alt="img2" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img3.png" alt="img3" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img4.png" alt="img4" width={1000} height={1000} />
+        </div>
+        <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img5.png" alt="img1" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img6.png" alt="img2" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img7.png" alt="img3" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img8.png" alt="img4" width={1000} height={1000} />
+        </div>
+         <div>
+          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img9.png" alt="img4" width={1000} height={1000} />
+        </div>
+       
+      </Slider>
     </div>
   );
-};
+}
 
-export default InfiniteImageCarousel;
+export default AutoPlay;

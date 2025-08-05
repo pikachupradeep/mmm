@@ -3,8 +3,8 @@
 
 export default function ContactHero() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-100 via-white to-blue-50 py-28 px-6 sm:px-12 text-blue-900">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className=" bg-blue-50 py-18 px-16 w-full">
+      <div className=" text-center">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
           Get in <span className="text-blue-600">Touch</span> With Us

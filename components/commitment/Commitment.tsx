@@ -4,7 +4,7 @@ import CheckBox from "../checkbox/CheckBox"
 
 const Commitment = () => {
   return (
-    <div className="max-w-[1000px] m-auto p-4 flex items-center gap-6 mt-50">
+    <div className="max-w-[1000px] m-auto p-4 flex flex-col sm:flex-row sm:items-center gap-6 mt-50">
         <div className="basis-1/2">
             <h4 className="mb-4 font-semibold">Commitment to Customer Satisfaction</h4>
             <p className="mb-4">At Beltone Sri Lanka, our customers come first. We believe in long-term relationships, ensuring that every individual receives the best 
