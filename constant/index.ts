@@ -64,61 +64,61 @@ export const faq = [
   {
     id: 1,
     value: "item-1",
-    question: "What services do you offer?",
-    answer: "We offer web development, mobile app development, UI/UX design, and custom software solutions."
+    question: "What types of hearing aids do you offer?",
+    answer: "We offer a wide range of hearing aids including behind-the-ear (BTE), receiver-in-ear (RIE), in-the-ear (ITE), and completely-in-canal (CIC) models, designed to meet various levels of hearing loss and lifestyle needs."
   },
   {
     id: 2,
     value: "item-2",
-    question: "How do you ensure software quality?",
-    answer: "We follow agile methodology, perform code reviews, and conduct thorough testing before deployment."
+    question: "How do I know if I need a hearing aid?",
+    answer: "If you frequently ask people to repeat themselves, struggle to hear conversations in noisy places, or find yourself turning the volume up too high, it might be time to schedule a free hearing test with one of our specialists."
   },
   {
     id: 3,
     value: "item-3",
-    question: "Can you work with our existing system?",
-    answer: "Yes, we can integrate, upgrade, or rebuild around your existing system based on your requirements."
+    question: "Are hearing tests free?",
+    answer: "Yes, we offer complimentary hearing evaluations at all of our locations. The test is painless, quick, and gives you instant results."
   },
   {
     id: 4,
     value: "item-4",
-    question: "How long does it take to complete a project?",
-    answer: "Project timelines vary based on complexity, typically ranging from a few weeks to several months."
+    question: "Can I try a hearing aid before buying?",
+    answer: "Absolutely! We offer free hearing aid trials, so you can experience the difference before making a commitment."
   },
   {
     id: 5,
     value: "item-5",
-    question: "Do you provide post-launch support?",
-    answer: "Yes, we offer maintenance, updates, and technical support after the product is launched."
+    question: "How much do hearing aids cost?",
+    answer: "Prices vary depending on the technology level, features, and style. We offer a range of models to suit different budgets, and financing options are also available."
   },
   {
     id: 6,
     value: "item-6",
-    question: "How do you handle project communication?",
-    answer: "We use tools like Slack, Zoom, and email with regular updates and milestone tracking."
+    question: "Are your hearing aids Bluetooth-compatible?",
+    answer: "Yes, many of our hearing aids support Bluetooth streaming, allowing you to connect with smartphones, TVs, and other devices for improved listening."
   },
   {
     id: 7,
     value: "item-7",
-    question: "What technologies do you specialize in?",
-    answer: "We specialize in React, Node.js, Python, .NET, Flutter, and cloud platforms like AWS and Azure."
+    question: "Do you offer support and repairs after purchase?",
+    answer: "Yes. We provide lifetime aftercare, including cleaning, adjustments, and repairs at any of our nationwide locations."
   },
   {
     id: 8,
     value: "item-8",
-    question: "Can you help with software planning and consultation?",
-    answer: "Absolutely! We provide expert consultation to help define your software strategy and roadmap."
+    question: "Will my insurance cover hearing aids?",
+    answer: "Some insurance plans do offer coverage. We’ll help you check your benefits and file claims where applicable. We also accept FSA and HSA payments."
   },
   {
     id: 9,
     value: "item-9",
-    question: "Is my project information kept confidential?",
-    answer: "Yes, we sign NDAs and follow strict confidentiality and data protection policies."
+    question: "How long do hearing aid batteries last?",
+    answer: "Battery life varies by model and usage. Some models use rechargeable batteries that last all day on a single charge, while others may require replacement every few days."
   },
   {
     id: 10,
     value: "item-10",
-    question: "How is the pricing structured?",
-    answer: "Pricing depends on project scope, complexity, and duration; we offer both fixed and hourly models."
+    question: "How often should I get my hearing checked?",
+    answer: "We recommend getting your hearing tested once a year, or sooner if you notice changes. Regular checkups help ensure your devices are properly tuned to your hearing needs."
   }
 ];
