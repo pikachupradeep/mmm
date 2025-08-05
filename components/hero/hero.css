@@ -1,0 +1,29 @@
+.hero {
+    background-image: linear-gradient(to bottom,rgba(145, 175, 231, 0.274),rgba(255, 255, 255, 0.581)), url(../../public/mob-girl.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 6.5rem;
+    min-height: 80vh;
+}
+
+
+
+
+
+
+
+
+@media (min-width:1280px) {
+    .hero {
+    background-image: url(../../public/bg-laptop.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 6.5rem;
+    min-height: 100vh;
+}
+
+}
+
+

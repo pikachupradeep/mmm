@@ -1,0 +1,7 @@
+.abhero {
+    background-image:  linear-gradient(to bottom right,rgba(0, 0, 0, 0.34),rgba(128, 128, 128, 0.214)), url(../../public//aboutbg.png);
+    min-height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
