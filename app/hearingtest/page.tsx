@@ -24,7 +24,7 @@ const containerVariants: Variants = {
 
 const HearingTest = () => {
   return (
-    <div className="min-h-screen p-4">
+    <div className="min-h-screen p-4 mt-34">
       <div className="hearingaidhero">
         <HearingAidPage />
       </div>

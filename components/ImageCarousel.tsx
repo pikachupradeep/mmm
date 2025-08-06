@@ -28,7 +28,7 @@ function AutoPlay() {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -39,42 +39,29 @@ function AutoPlay() {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false // Better for mobile
         }
       }
     ]
   };
+  
   return (
-    <div className="slider-container mt-0 mb-16">
+    <div className="slider-container mt-0 mb-16 px-4"> {/* Added padding */}
       <Slider {...settings}>
-        <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img1.png" alt="img1" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img2.png" alt="img2" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img3.png" alt="img3" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img4.png" alt="img4" width={1000} height={1000} />
-        </div>
-        <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img5.png" alt="img1" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img6.png" alt="img2" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img7.png" alt="img3" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img8.png" alt="img4" width={1000} height={1000} />
-        </div>
-         <div>
-          <Image className="h-[25rem]   md:h-[30rem] w-auto rounded-lg" src="/carousel/img9.png" alt="img4" width={1000} height={1000} />
-        </div>
-       
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
+          <div key={item} className="px-2"> {/* Added padding between slides */}
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              <Image
+                src={`/carousel/img${item}.png`}
+                alt={`img${item}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+          </div>
+        ))}
       </Slider>
     </div>
   );

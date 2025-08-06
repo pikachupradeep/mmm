@@ -7,6 +7,7 @@ import ButtonBg from '../button/ButtonBg'
 const Footer = () => {
   return (
     <div className='w-full bg-gray-800 p-4 text-white'>
+      <div className="p-4">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
@@ -49,6 +50,7 @@ const Footer = () => {
 
       <div className="">
         <p className='text-center'>Powered by Erik Rajapaksha pvt ltd.</p>
+      </div>
       </div>
 
     </div>

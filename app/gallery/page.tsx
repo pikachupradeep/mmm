@@ -5,7 +5,7 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <div className='mt-28'>
+    <div className='mt-28 px-4 sm:px-0'>
       <div className="">
         <GalleryHeader />
       </div>

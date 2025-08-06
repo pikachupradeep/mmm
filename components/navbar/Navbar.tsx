@@ -22,8 +22,8 @@ const Navbar = () => {
   `
 
   return (
-    <div className='h-[6rem] w-full flex justify-between items-center shadow-xl px-4 navbar bg-white dark:bg-black
-    fixed z-[100]'>
+    <div className='h-[6rem] w-full flex justify-between items-center shadow-xl navbar bg-white dark:bg-black
+    fixed z-[100] px-8'>
       {/* Logo */}
       <Link href="/">
         <Image

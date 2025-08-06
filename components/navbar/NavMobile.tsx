@@ -23,7 +23,7 @@ export function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="bg-transparent" variant="outline">
+        <Button className="bg-gray-300" variant="outline">
         <RiMenu4Fill className="text-blue-900 text-4xl" />
         </Button>
       </SheetTrigger>
