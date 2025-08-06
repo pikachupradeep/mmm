@@ -1,19 +1,64 @@
+'use client';
+
+import { motion, Variants } from 'framer-motion';
 import { FaArrowRight, FaPhoneAlt } from 'react-icons/fa';
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      ease: 'easeInOut',
+      delay: 0.2,
+    },
+  },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 1.2,
+      ease: 'easeInOut',
+      delay: 0.1,
+    },
+  },
+};
 
 export default function GalleryHeader() {
   return (
-    <div className="px-4 md:px-8 py-12 mx-auto min-h-screen space-y-2">
+    <motion.div
+      className="px-4 md:px-8 py-12 mx-auto min-h-screen space-y-12"
+      initial="hidden"
+      animate="show"
+      variants={fadeIn}
+    >
       {/* Hero Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-stretch">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         {/* Left: Text Block */}
-        <div className="bg-blue-50 p-8 rounded-lg flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-900">
+        <motion.div
+          className="bg-blue-50 p-8 rounded-lg flex flex-col justify-center"
+          variants={fadeInUp}
+        >
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold mb-4 text-blue-900"
+            variants={fadeInUp}
+          >
             Rediscover Clear Hearing
-          </h1>
-          <p className="text-gray-700 text-lg mb-6">
+          </motion.h1>
+          <motion.p className="text-gray-700 text-lg mb-6" variants={fadeInUp}>
             Beltone Hearing Aids by Eric Rajapakse – Trusted hearing solutions in Sri Lanka with over a decade of experience.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-2">
+          </motion.p>
+          <motion.div className="flex flex-col sm:flex-row gap-2" variants={fadeInUp}>
             <button className="bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition w-max">
               Book Appointment
             </button>
@@ -24,35 +69,57 @@ export default function GalleryHeader() {
               <FaPhoneAlt />
               Call Now
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right: Image Block */}
-        <div className="rounded-lg overflow-hidden">
-          <img
+        <motion.div className="rounded-lg overflow-hidden" variants={fadeInUp}>
+          <motion.img
             src="/belbg1.png"
             alt="Hearing Aid Consultation"
-            className="w-full h-[30rem] object-cover"
+            className="w-full h-[32rem] object-cover rounded-lg"
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.3 }}
+            viewport={{ once: true }}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Feature Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         {/* Experience Section */}
-        <div className="flex flex-col gap-2">
-          <img
+        <motion.div className="flex flex-col gap-2" variants={fadeInUp}>
+          <motion.img
             src="/aboutbg.png"
             alt="Hearing test session"
             className="rounded-lg w-full h-64 object-cover"
+            initial={{ scale: 0.85, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+            viewport={{ once: true }}
           />
-          <div className="bg-blue-100 p-6 rounded-lg text-center">
-            <p className="text-2xl font-bold text-blue-900">10+<br />Years Experience</p>
-          </div>
-        </div>
+          <motion.div
+            className="bg-blue-100 p-6 rounded-lg text-center"
+            variants={fadeInUp}
+          >
+            <p className="text-2xl font-bold text-blue-900">
+              10+<br />Years Experience
+            </p>
+          </motion.div>
+        </motion.div>
 
         {/* About Section */}
-        <div className="bg-blue-100 p-6 rounded-lg flex flex-col justify-between">
+        <motion.div
+          className="bg-blue-100 p-6 rounded-lg flex flex-col justify-between"
+          variants={fadeInUp}
+        >
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-semibold text-blue-900">Why Beltone?</h2>
             <FaArrowRight className="w-5 h-5 text-blue-900" />
@@ -60,10 +127,13 @@ export default function GalleryHeader() {
           <p className="text-gray-700 text-sm leading-relaxed">
             Trusted globally, personalized locally. Beltone offers advanced hearing aid technology, expert care, and support tailored to your hearing journey in Sri Lanka.
           </p>
-        </div>
+        </motion.div>
 
         {/* Contact Section */}
-        <div className="bg-blue-700 text-white p-6 rounded-lg flex flex-col justify-between">
+        <motion.div
+          className="bg-blue-700 text-white p-6 rounded-lg flex flex-col justify-between"
+          variants={fadeInUp}
+        >
           <div>
             <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
             <p className="text-sm text-blue-100 mb-6">
@@ -74,8 +144,8 @@ export default function GalleryHeader() {
           <button className="bg-white text-blue-700 px-6 py-2 rounded-full hover:bg-blue-100 transition">
             Get Directions
           </button>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

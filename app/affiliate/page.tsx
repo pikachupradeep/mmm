@@ -1,4 +1,8 @@
-'use client'
+'use client';
+
+import { useEffect, useRef, ReactNode } from "react";
+import { motion, useAnimation, Variants } from "framer-motion";
+import { useInView } from "framer-motion";
 import {
   FaCheckCircle,
   FaUserPlus,
@@ -7,11 +11,46 @@ import {
   FaDollarSign,
 } from "react-icons/fa";
 
+const fadeSlideVariants: Variants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 30, transition: { duration: 0.6, ease: "easeIn" } },
+};
+
+interface AnimatedSectionProps {
+  children: ReactNode;
+  className?: string;
+  id?: string;
+}
+
+function AnimatedSection({ children, className = "", id }: AnimatedSectionProps) {
+  const controls = useAnimation();
+  const ref = useRef<HTMLElement | null>(null);
+  const inView = useInView(ref, { amount: 0.1 });
+
+  useEffect(() => {
+    if (inView) controls.start("visible");
+    else controls.start("hidden");
+  }, [controls, inView]);
+
+  return (
+    <motion.section
+      ref={ref}
+      id={id}
+      initial="hidden"
+      animate={controls}
+      variants={fadeSlideVariants}
+      className={className}
+    >
+      {children}
+    </motion.section>
+  );
+}
+
 export default function AffiliatePage() {
   return (
     <div className="font-sans text-gray-800 mt-32">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-24 px-6 text-center shadow-lg">
+      <AnimatedSection className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-24 px-6 text-center shadow-lg">
         <h1 className="text-5xl font-extrabold mb-4">Join Our Affiliate Program</h1>
         <p className="text-xl opacity-90 mb-6">
           Earn money by sharing our products with your audience.
@@ -22,10 +61,10 @@ export default function AffiliatePage() {
         >
           Learn More
         </a>
-      </section>
+      </AnimatedSection>
 
       {/* Why Join */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      <AnimatedSection className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">Why Join?</h2>
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 text-lg">
           {[
@@ -41,10 +80,10 @@ export default function AffiliatePage() {
             </li>
           ))}
         </ul>
-      </section>
+      </AnimatedSection>
 
       {/* How It Works */}
-      <section id="howitworks" className="bg-gray-50 py-20 px-6">
+      <AnimatedSection id="howitworks" className="bg-gray-50 py-20 px-6">
         <h2 className="text-4xl font-bold text-center mb-12">How It Works</h2>
         <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto text-center">
           {[
@@ -62,10 +101,10 @@ export default function AffiliatePage() {
             </div>
           ))}
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6 max-w-3xl mx-auto">
+      <AnimatedSection className="py-20 px-6 max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12">FAQs</h2>
         <div className="space-y-8 text-gray-700">
           <div>
@@ -87,7 +126,7 @@ export default function AffiliatePage() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }

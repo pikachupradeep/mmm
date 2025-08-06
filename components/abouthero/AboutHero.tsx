@@ -1,10 +1,16 @@
 'use client';
 
 import { FaHandshake, FaUsers, FaGlobe } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 export default function AboutHero() {
   return (
-    <section className="relative bg-blue-100 text-blue-900 py-28 px-6 sm:px-12">
+    <motion.section
+      className="relative bg-blue-100 text-blue-900 py-28 px-6 sm:px-12"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <div className="max-w-6xl mx-auto text-center">
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-6">
@@ -35,7 +41,7 @@ export default function AboutHero() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
