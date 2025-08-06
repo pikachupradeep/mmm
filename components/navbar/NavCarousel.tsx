@@ -54,7 +54,7 @@ function AutoPlay() {
           <p className="text-white">Phone  : 076-1647228</p>
         </div>
          <div>
-           <p className="text-white">Np.341 Galle Rd, Colombo 00300</p>
+           <p className="text-white">No.341 Galle Rd, Colombo 00300</p>
         </div>
          <div>
           <p className="text-white">info@ericrajapakse.lk</p>

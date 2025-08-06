@@ -191,7 +191,7 @@ const HearingTest = () => {
             information about the technology, performance, design features, and connectivity options
             of Beltone Rely devices.
           </p>
-          <h5 className="font-semibold">What's Included in the Specifications:</h5>
+          <h5 className="font-semibold">What's included in the Specifications:</h5>
 
           <div className="mt-10">
             <CheckBox desc="Device models and sizes" />

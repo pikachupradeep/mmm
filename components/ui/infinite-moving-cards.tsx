@@ -12,6 +12,7 @@ type CardItem = {
   name: string;
   title: string;
   img: string;
+  rating: number; // ⭐️ Rating (0–5)
 };
 
 interface InfiniteMovingCardsProps {
@@ -31,7 +32,6 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
-
   const [start, setStart] = useState(false);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
 
   const getSpeed = () => {
     if (containerRef.current) {
-      let duration = "40s"; // default for 'normal'
+      let duration = "40s";
       if (speed === "fast") duration = "20s";
       else if (speed === "slow") duration = "80s";
 
@@ -103,17 +103,41 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
               </p>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex items-center gap-1">
-                    <Image src={item.img} className="h-[4rem] w-[4rem] rounded-full object-cover" width={400} height={400} alt="profile" />
-                    <div className="flex flex-col gap-1">
+                  <Image
+                    src={item.img}
+                    className="h-[4rem] w-[4rem] rounded-full object-cover"
+                    width={400}
+                    height={400}
+                    alt="profile"
+                  />
+                  <div className="flex flex-col gap-1">
                     <p className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.name}
+                      {item.name}
                     </p>
                     <p className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
-                    {item.title}
+                      {item.title}
                     </p>
-
+                    {/* ⭐️ Star Rating */}
+                    <div className="flex items-center mt-1">
+                      {Array.from({ length: 5 }).map((_, starIdx) => (
+                        <svg
+                          key={starIdx}
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill={starIdx < item.rating ? "#facc15" : "none"}
+                          viewBox="0 0 24 24"
+                          stroke="#facc15"
+                          className="w-4 h-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M11.48 3.499l2.272 4.605 5.074.738-3.673 3.58.867 5.055-4.54-2.388-4.54 2.388.867-5.055-3.673-3.58 5.074-.738L11.48 3.5z"
+                          />
+                        </svg>
+                      ))}
                     </div>
-                 
+                  </div>
                 </span>
               </div>
             </blockquote>

@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="">
           <h1 className="text-3xl">Logo</h1>
 
-          <p>Beltone by Erik rajapaksha</p>
+          <p>Beltone by Eric Rajapakse</p>
         </div>
         <div className="flex flex-col">
 

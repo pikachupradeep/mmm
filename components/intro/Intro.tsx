@@ -170,7 +170,9 @@ const Intro: FC = () => {
             <CheckBox desc="Expert Hearing Assessments – Conducted by trained professionals using advanced audiometry." />
             <CheckBox desc="Customized Fittings – Tailor-made solutions to match individual needs and lifestyles." />
             <CheckBox desc="Free Hearing Aid Trials – Ensuring customers experience the best solution before purchasing." />
-            <CheckBox desc="Dedicated Aftercare Services – Adjustments, cleaning,and repairs for long-term satisfaction." />
+            <CheckBox desc="Dedicated Aftercare Services – Adjustments, cleaning, and repairs for long-term satisfaction.
+             Trusted by HEALTHCARE PROFESSIONALS & ORGANIZATIONS – We collaborate with ENT specialists, hospitals, and 
+             corporate clients to provide professional hearing solutions." />
           </div>
         </div>
       </AnimatedBlock>

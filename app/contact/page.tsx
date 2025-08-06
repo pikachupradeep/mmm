@@ -84,7 +84,7 @@ const page = () => {
               Contact Info
             </motion.h5>
             <motion.p className="mb-3" variants={fadeInUp}>
-              📍 Address: #341, Galle Road, Colombo 03, Sri Lanka
+              📍 Address: No.341, Galle Road, Colombo 03, Sri Lanka
             </motion.p>
             <motion.p className="mb-3" variants={fadeInUp}>
               📧 Email:{' '}

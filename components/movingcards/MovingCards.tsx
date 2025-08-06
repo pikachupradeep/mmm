@@ -16,37 +16,42 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "Outstanding service! The team was professional, responsive, and exceeded our expectations from start to finish.",
+      "Beltone changed my life. I can finally hear clearly again!",
     name: "Emily Carter",
-    title: "Marketing Manager, BrightWave Media",
+    title: "Retired Teacher",
+    rating: 5,
     img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     quote:
-      "Their attention to detail and dedication to quality really impressed us. We’d gladly work with them again.",
+      "Comfortable, reliable, and easy to use. Highly recommend Beltone!",
     name: "James Patel",
-    title: "Founder, NextGen Solutions",
+    title: "Veteran",
+    rating: 4,
     img: "https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     quote:
-      "They turned our vision into reality. The final product was sleek, fast, and totally on-brand. Highly recommended!",
+      "Great sound quality and friendly staff. Love my Beltone aids!",
     name: "Sophia Nguyen",
-    title: "Creative Director, Luna Studio",
+    title: "Artist",
+    rating: 5,
     img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     quote:
-      "Working with them was seamless. Deadlines were met, communication was clear, and the outcome was top-tier.",
+      "Very professional service. My hearing is better than ever!",
     name: "Michael Rodriguez",
-    title: "COO, Velocity Ventures",
+    title: "Musician",
+    rating: 4,
     img: "https://images.pexels.com/photos/3775535/pexels-photo-3775535.jpeg?auto=compress&cs=tinysrgb&w=600"
   },
   {
     quote:
-      "Fantastic experience! We saw immediate results after launching our project. Their team really knows their stuff.",
+      "I forgot what I was missing until I tried Beltone. Amazing clarity!",
     name: "Isabella Russo",
-    title: "Product Manager, NovaTech",
+    title: "Grandmother of Four",
+    rating: 5,
     img: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600"
   }
 ];
