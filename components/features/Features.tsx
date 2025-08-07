@@ -43,7 +43,7 @@ const Features = () => {
       icon: <MdOutlinePriceChange className="text-6xl" />,
       title: "Affordable Prices",
       desc: "Get superior hearing solutions at competitive prices without compromising on quality or performance.",
-      extraClass: "bg-blue-700 text-white hover:bg-white hover:text-black",
+      extraClass: "bg-blue-700 text-white hover:text-blue-800 hover:bg-white",
     },
   ];
 
