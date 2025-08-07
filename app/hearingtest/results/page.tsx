@@ -20,7 +20,7 @@ export default function Results() {
   const passed = results.every((r) => r.threshold <= 20)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-8 flex items-center justify-center mt-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 p-8 flex items-center justify-center mt-34">
       <div className="w-full max-w-6xl bg-white rounded-2xl shadow-xl p-8 space-y-10">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800">Your Hearing Test Results</h1>

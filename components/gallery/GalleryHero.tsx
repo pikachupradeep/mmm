@@ -29,23 +29,23 @@ export default function GalleryHero() {
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
           {[
             {
-              label: 'VR',
-              src: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600',
+              label: 'sample1',
+              src: '/carousel/img6.png',
               span: 'col-span-1',
             },
             {
-              label: 'Tech',
-              src: 'https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=1000',
+              label: 'sample2',
+              src: '/carousel/img2.png',
               span: 'md:col-span-2',
             },
             {
-              label: 'Dev',
-              src: 'https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000',
+              label: 'sample3',
+              src: '/carousel/img3.png',
               span: 'md:col-span-2',
             },
             {
-              label: 'Retro',
-              src: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600',
+              label: 'sample4',
+              src: '/carousel/img4.png',
               span: 'col-span-1',
             },
           ].map(({ label, src, span }, i) => (

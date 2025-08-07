@@ -46,7 +46,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             custom={2}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-gray-900 leading-tight"
+            className="text-3xl sm:text-4xl md:text-[6rem] font-extrabold font-sans mt-4 text-gray-900 leading-tight"
           >
             Your Gateway to <span className="text-blue-700">Optimal</span> Hearing Health
           </motion.h1>

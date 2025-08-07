@@ -42,12 +42,12 @@ const Navbar = () => {
 
       {/* Nav Items */}
       <ul className='gap-10 hidden sm:flex'>
-        <li><Link style={{fontSize: '1.4rem'}} href="/" className={getLinkClass('/')}>Home</Link></li>
-        <li><Link style={{fontSize: '1.4rem'}} href="/about" className={getLinkClass('/about')}>About</Link></li>
-        <li><Link style={{fontSize: '1.4rem'}} href="/affiliate" className={getLinkClass('/affiliate')}>Affiliate Membership</Link></li>
-        <li><Link style={{fontSize: '1.4rem'}} href="/hearingtest" className={getLinkClass('/hearingtest')}>Hearing Test & Products</Link></li>
-        <li><Link style={{fontSize: '1.4rem'}} href="/gallery" className={getLinkClass('/gallery')}>Gallery</Link></li>
-        <li><Link style={{fontSize: '1.4rem'}} href="/contact" className={getLinkClass('/contact')}>Contact</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/" className={getLinkClass('/')}>Home</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/about" className={getLinkClass('/about')}>About</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/affiliate" className={getLinkClass('/affiliate')}>Affiliate Membership</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/hearingtest" className={getLinkClass('/hearingtest')}>Hearing Test & Products</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/gallery" className={getLinkClass('/gallery')}>Gallery</Link></li>
+        <li><Link style={{fontSize: '1.3rem'}} href="/contact" className={getLinkClass('/contact')}>Contact</Link></li>
       </ul>
 
       {/* Login Button */}

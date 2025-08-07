@@ -34,7 +34,7 @@ const page = () => {
         viewport={{ once: false, amount: 0.3 }}
         variants={scrollVariant}
       >
-        <h4 className="font-semibold text-center mb-4">Beltone by Eric Rajapaksa</h4>
+        <h4 className="font-semibold text-center mb-4">Beltone by Eric Rajapakse</h4>
 
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
           <motion.div
@@ -66,7 +66,7 @@ const page = () => {
       </motion.div>
 
       <motion.div
-        className="mt-50 max-w-[1280px] m-auto"
+        className="mt-50 max-w-[1280px] m-auto p-4"
         initial="hidden"
         whileInView="visible"
         exit="exit"
@@ -113,7 +113,7 @@ const page = () => {
       </motion.div>
 
       <motion.div
-        className="mt-50 max-w-[1280px] m-auto"
+        className="mt-50 max-w-[1280px] m-auto p-4"
         initial="hidden"
         whileInView="visible"
         exit="exit"

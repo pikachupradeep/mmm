@@ -48,16 +48,16 @@ function AutoPlay() {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <p className="text-white">Beltone by Eric Rajapakse</p>
+          <span className="text-white text-[14px]">Beltone by Eric Rajapakse</span>
         </div>
          <div>
-          <p className="text-white">Phone  : 076-1647228</p>
+          <span className="text-white text-[14px]">Phone  : 076-1647228</span>
         </div>
          <div>
-           <p className="text-white">No.341 Galle Rd, Colombo 00300</p>
+           <span className="text-white text-[14px]">No.341 Galle Rd, Colombo 00300</span>
         </div>
          <div>
-          <p className="text-white">info@ericrajapakse.lk</p>
+          <span className="text-white text-[14px]">info@ericrajapakse.lk</span>
         </div>
        
       </Slider>

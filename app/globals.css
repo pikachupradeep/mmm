@@ -170,7 +170,7 @@ p {
 
 
 html {
-  font-size: 58.5%;
+  font-size: 66.5%;
 }
 
 input::placeholder {
@@ -185,7 +185,7 @@ textarea::placeholder {
 
 @media (min-width:640px) {
   html {
-   font-size: 59.5%;
+   font-size: 66.5%;
   }
 
  
@@ -193,27 +193,27 @@ textarea::placeholder {
 
 @media (min-width:768px) {
   html {
-    font-size: 61.5%;
+    font-size: 67.1%;
   }
 
 }
 
 @media (min-width:1024px) {
   html {
-    font-size: 63.5%;
+    font-size: 67.5%;
   }
 }
 
 @media (min-width:1280px) {
   html {
-    font-size: 66.5%;
+    font-size: 67.9%;
   }
 }
 
 
 @media (min-width:1680px) {
   html {
-    font-size: 67.5%;
+    font-size: 68%;
   }
 }
   

@@ -91,7 +91,7 @@ const Intro: FC = () => {
   return (
     <div className="p-4 mt-50 max-w-[1000px] m-auto">
       <AnimatedBlock className="text-center font-semibold mb-10">
-        <h4>Why Beltone in Sri Lanka is Special?</h4>
+        <h3>Why Beltone in Sri Lanka is Special?</h3>
       </AnimatedBlock>
 
       <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
@@ -101,7 +101,7 @@ const Intro: FC = () => {
 
         <div className="flex flex-col sm:basis-1/2 gap-6">
           <AnimatedBlock className="font-semibold">
-            <h5>Exclusive Partner of Beltone Hearing Aids</h5>
+            <h4>Exclusive Partner of Beltone Hearing Aids</h4>
           </AnimatedBlock>
           <AnimatedBlock>
             <p>
@@ -112,7 +112,7 @@ const Intro: FC = () => {
           </AnimatedBlock>
 
           <AnimatedBlock className="font-semibold">
-            <h5>Advanced Hearing Solutions</h5>
+            <h4>Advanced Hearing Solutions</h4>
           </AnimatedBlock>
           <AnimatedBlock>
             <p>
@@ -136,7 +136,7 @@ const Intro: FC = () => {
 
           <div className="sm:basis-1/2">
             <AnimatedBlock className="font-semibold mb-4">
-              <h5>Trusted by Healthcare Professionals & Organizations</h5>
+              <h4>Trusted by Healthcare Professionals & Organizations</h4>
             </AnimatedBlock>
 
             <AnimatedBlock>

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-const frequencies = [125, 250, 500, 1000, 2000, 4000, 8000]
+const frequencies = [250, 500, 1000, 2000, 4000,6000, 8000]
 type Ear = 'left' | 'right'
 
 export default function EarcareTest() {

@@ -76,7 +76,7 @@ export default function AffiliatePage() {
           ].map((benefit, i) => (
             <li key={i} className="flex items-start gap-4">
               <FaCheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-              <span>{benefit}</span>
+              <p>{benefit}</p>
             </li>
           ))}
         </ul>
@@ -96,7 +96,7 @@ export default function AffiliatePage() {
               <div className="w-16 h-16 mx-auto flex items-center justify-center bg-blue-100 text-blue-600 rounded-full text-2xl mb-4 shadow">
                 {icon}
               </div>
-              <h3 className="font-semibold text-xl mb-2">{title}</h3>
+              <h6 className="font-semibold text-xl mb-2">{title}</h6>
               <p className="text-gray-600">{desc}</p>
             </div>
           ))}

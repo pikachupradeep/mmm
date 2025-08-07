@@ -13,7 +13,7 @@ const FeaBox = ({title,desc,children,className}:FeatureBox) => {
         <div className="w-full flex flex-col items-center">
             {children}
         </div>
-      <h6 className='font-semibold text-center mb-2'>{title}</h6>
+      <h5 className='font-semibold text-center mb-2'>{title}</h5>
       <p className='text-center'>{desc}</p>   
       </div>
   )
